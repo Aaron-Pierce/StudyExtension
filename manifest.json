@@ -1,0 +1,21 @@
+{
+    "name": "Study",
+    "description": "Chill out and study",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": "book-flat.png"
+    },
+    "content_scripts": [
+        {
+          "matches": ["http://*/*", "https://*/*"],
+          "js": ["bg.js"]
+        }
+      ],
+      "permissions": [
+        "tabs"
+      ],
+      "background": {
+        "scripts": ["opentab.js"]
+      }
+}
